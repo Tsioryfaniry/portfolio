@@ -1,14 +1,14 @@
-
-import './App.css'
-import Test from './components/Heading'
+import './assets/App.css'
+import FirstSection from './section/firstSection/FirstSection'
+import Hero from './section/hero/Hero'
 
 function App() {
 
   return (
     <>
-      <Test/>
-
-  
+      <Hero/>  
+      <FirstSection/>  
+      
     </>
   )
 }
