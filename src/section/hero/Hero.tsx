@@ -3,16 +3,17 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import Upload from '../../utils/Progress';
+import {getUser} from '../../server/api/User'
 gsap.registerPlugin(ScrollTrigger);
 
 
 
-function Index() {
+function Index({data}:any) {
   const firstRef:any = useRef();
   const secondRef:any = useRef();
   const wrapperRef:any = useRef();
   useEffect(()=>{
-
+    getUser()
       
   },[])
     
@@ -65,7 +66,7 @@ function Index() {
     <div className={style.wrapper} ref={wrapperRef}>
       <section className={style.header}>
         {" "}
-        <h1>HEADER</h1>
+        <h1>{data}</h1>
         <Upload />
       </section>
       <section className={style.first} data-pin="true">

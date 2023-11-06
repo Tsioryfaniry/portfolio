@@ -1,7 +1,8 @@
+import style from './progress.module.scss'
 function Upload(){
     return (
         <>
-            <p>| Upload</p>
+            <p className={style.pg}>TSIORY </p>
         </>
 
     )
