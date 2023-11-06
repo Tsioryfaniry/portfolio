@@ -1,32 +1,17 @@
+import style from './Heading.module.scss'
 
 import Hero from '../interface/Landing';
 
 function Heading(props:Hero) {
-    const{ tag} = props
+    const{ tag, children } = props
     const Tag:any = tag;
   return (
-    <div>
+    <div className={style.heading}>
         <Tag>
-            
+            {children}
         </Tag>
     </div>
   )
 }
 
-function Test () {
-    return (
-    <div>
-        <Heading tag='h3'>
-            Titre h3
-        </Heading>       
-         <Heading tag='h1'>
-            Titre h1
-        </Heading>
-        <Heading tag="h6">
-            Titre h6
-        </Heading>
-    </div>
-        
-    )
-}
-export default Test
+export default Heading
