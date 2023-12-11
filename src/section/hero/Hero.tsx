@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/all";
 import { useEffect, useLayoutEffect, useRef } from "react";
 import Upload from '../../utils/Progress';
 import {getUser} from '../../server/api/User'
+import SecondeSection from '../secondeSection/SecondeSection'
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -70,7 +71,9 @@ function Index({data}:any) {
         <Upload />
       </section>
       <section className={style.first} data-pin="true">
-        <h2 ref={firstRef}>FIRST</h2>
+        <SecondeSection>
+        <h2 ref={firstRef}>FIRSTS</h2>
+        </SecondeSection>
       </section>
       <section className={style.second} data-pin2="true">
         <h2 ref={secondRef}>SECOND</h2>
